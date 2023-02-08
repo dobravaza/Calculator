@@ -70,11 +70,11 @@ equalBtn.addEventListener('click', function () {
 		firstNumber = 0
 		secondNumber = 0
 	} else if (operator === 'divide') {
-		currentScreen.textContent = firstNumber / secondNumber
+		currentScreen.textContent = firstNumber /= secondNumber
 		firstNumber = 0
 		secondNumber = 0
 	} else if (operator === 'multiplication') {
-		currentScreen.textContent = firstNumber * secondNumber
+		currentScreen.textContent = firstNumber *= secondNumber
 		firstNumber = 0
 		secondNumber = 0
 	}
