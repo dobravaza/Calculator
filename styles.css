@@ -1,0 +1,113 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: rgb(157, 109, 130);
+	background: radial-gradient(circle, rgba(157, 109, 130, 1) 0%, rgba(46, 52, 59, 1) 100%);
+	color: #000000;
+	font-family: 'Roboto', sans-serif;
+}
+
+button {
+	cursor: pointer;
+}
+
+.main {
+	height: 80vh;
+	min-height: 500px;
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.calculator {
+	width: 450px;
+	border: 3px solid rgb(1, 1, 1);
+	border-radius: 15px;
+	padding: 20px;
+	background: rgb(57, 48, 152);
+	background: rgb(223, 222, 235);
+	background: linear-gradient(233deg, rgba(223, 222, 235, 0.03405112044817926) 0%, rgba(209, 230, 255, 1) 100%);
+}
+
+.screen {
+	padding: 10px 20px;
+	border: 3px solid rgb(18, 2, 118);
+	border-radius: 10px;
+	margin-bottom: 20px;
+	background-color: rgb(223, 214, 249);
+	text-align: right;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.span-2 {
+	grid-column: span 2;
+}
+
+.screen-last {
+	min-height: 30px;
+	font-size: 20px;
+}
+
+.screen-current {
+	min-height: 60px;
+	font-size: 40px;
+}
+
+.buttons-grid {
+	display: grid;
+	grid-gap: 8px;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+	padding: 25px;
+	border: 3px solid rgb(37, 32, 95);
+	border-radius: 10px;
+	background-color: rgb(235, 235, 246);
+	font-size: 25px;
+	transition: 0.2s;
+}
+
+.btn:hover {
+	background-color: rgb(144, 144, 163);
+}
+
+.btn:active {
+	background-color: rgb(205, 208, 249);
+	transition: 0s;
+}
+
+.btn-red {
+	background-color: rgb(218, 99, 99);
+}
+
+.btn-red:hover {
+	background-color: rgb(241, 56, 56);
+	color: white;
+}
+
+.btn-red:active {
+	color: white;
+	background-color: red;
+}
+
+.btn-blue {
+	background-color: rgb(98, 98, 142);
+}
+
+.btn-blue:hover {
+	background-color: rgb(122, 95, 148);
+	color: white;
+}
+
+.btn-blue:active {
+	background-color: rgb(90, 65, 114);
+	color: white;
+}
