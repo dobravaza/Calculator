@@ -4,6 +4,9 @@ const clear = document.querySelector('.btn-red')
 const deleteBtn = document.querySelector('.btn-blue')
 const addButton = document.querySelector('.btn-plus')
 const equalBtn = document.querySelector('.equal')
+const minus = document.querySelector('.minus')
+const divide = document.querySelector('.divide')
+const multiplication = document.querySelector('.multiplication ')
 
 //czyszczenie calego currentscreen
 clear.addEventListener('click', () => {
@@ -27,17 +30,52 @@ allButtons.forEach(function (button) {
 	button.addEventListener('click', displayCurrent)
 })
 
-let firstNumber, secondNumber
+let operator = ''
 
+let firstNumber, secondNumber
+// minus
+minus.addEventListener('click', function () {
+	firstNumber = Number(currentScreen.textContent)
+	currentScreen.textContent = `${firstNumber} - `
+	operator = 'minus'
+})
+// add
 addButton.addEventListener('click', function () {
 	firstNumber = Number(currentScreen.textContent)
 	currentScreen.textContent = ''
+	currentScreen.textContent = `${firstNumber} + `
+	operator = 'add'
+})
+
+divide.addEventListener('click', function () {
+	firstNumber = Number(currentScreen.textContent)
+	currentScreen.textContent = `${firstNumber} ÷ `
+	operator = 'divide'
+})
+multiplication.addEventListener('click', function () {
+	firstNumber = Number(currentScreen.textContent)
+	currentScreen.textContent = `${firstNumber} * `
+	operator = 'multiplication'
 })
 
 equalBtn.addEventListener('click', function () {
-	secondNumber = Number(currentScreen.textContent)
-	sum = firstNumber + secondNumber
-	currentScreen.textContent = sum
-	firstNumber = null
-	secondNumber = null
+	secondNumber = Number(currentScreen.textContent.split(' ')[2])
+	currentScreen.textContent = ''
+	if (operator === 'add') {
+		currentScreen.textContent = firstNumber + secondNumber
+		// firstNumber = 0
+		// secondNumber = 0
+	} else if (operator === 'minus') {
+		currentScreen.textContent = firstNumber - secondNumber
+		firstNumber = 0
+		secondNumber = 0
+	} else if (operator === 'divide') {
+		currentScreen.textContent = firstNumber / secondNumber
+		firstNumber = 0
+		secondNumber = 0
+	} else if (operator === 'multiplication') {
+		currentScreen.textContent = firstNumber * secondNumber
+		firstNumber = 0
+		secondNumber = 0
+	}
 })
