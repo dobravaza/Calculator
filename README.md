@@ -1,9 +1,3 @@
-# Calculator
-A simple and easy-to-use calculator with basic mathematical operations. No installation required, simply clone or download the repository and run the index.html file in your browser. Perform basic mathematical operations such as addition, subtraction, multiplication, and division with a clean and user-friendly interface.
-
-
-Dobravaza Calculator
-A simple and easy-to-use calculator with basic mathematical operations.
 
 Features
 Perform basic mathematical operations such as addition, subtraction, multiplication, and division
@@ -19,7 +13,3 @@ If you would like to contribute to this project, feel free to fork the repositor
 
 Author
 Dobravaza
-
-License
-This project is licensed under the MIT License.
-
